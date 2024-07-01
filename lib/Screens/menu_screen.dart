@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/wedgits/ButtonNNavgator.dart';
 import 'package:hello_world/wedgits/Navbar.dart';
-import 'package:hello_world/wedgits/buttonsmenu.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
@@ -42,14 +42,9 @@ class MenuScreen extends StatelessWidget {
                 ))
               ],
             ),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Buttonsmenu(),
-            )
           ],
         ),
+        bottomNavigationBar: BottomNavBar(),
       ),
     );
   }

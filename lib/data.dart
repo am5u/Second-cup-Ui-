@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/Models/Gifts.dart';
-import 'package:hello_world/Models/invoice.dart';
+import 'package:hello_world/Models/Invoice.dart';
+import 'package:hello_world/Models/item.dart';
 import 'package:hello_world/wedgits/Giftcard.dart';
 
 const List<Gift> allGifts = [
@@ -34,20 +35,44 @@ const List<Gift> allGifts = [
     imageUrl: "backtoschool.jpg",
     // no image url provided
     validFrom: "09/04/2024 – 07:14",
+    status: "09/04/2024 – 07:14",
+  ),
+  Gift(
+    title: "Mother DAY GIFT",
+    about: "BUY A  CUP OF COFFEE FOR YOU MOM , OR A COFFEE MUG",
+    imageUrl: "newcollection.jpg",
+    // no image url provided
+    validFrom: "22/04/2024 – 11:14",
+    status: "09/04/2024 – 07:14",
+  ),
+  Gift(
+    title: "Mother DAY GIFT",
+    about: "BUY A  CUP OF COFFEE FOR YOU MOM , OR A COFFEE MUG",
+    imageUrl: "newcollection.jpg",
+    // no image url provided
+    validFrom: "22/04/2024 – 11:14",
     status: "Expired",
   ),
 ];
-const List<Invoice> allInvoices = [
-  Invoice(
-      name: ['CARAMEL CORRETTO CHILLER LARGE', 'Ice spnash latte'],
-      quantity: [1, 2],
-      price: [59.21, 60.00]),
-  Invoice(
-      name: ['CHEESE CAKE BLUEBERRY PCS', 'cheese cake '],
-      quantity: [1, 3],
-      price: [61.79, 305.10]),
-  Invoice(
-      name: ['CHEESE CAKE LOTUS PCS', 'mocha'],
-      quantity: [1, 3],
-      price: [61.78, 80.00]),
+
+List<Invoice> invoices = [
+  Invoice(date: "23 JUN 2024", items: [
+    Item(name: 'FRUMITCHA CHILLER -REGULAR', quantity: 1, price: 120),
+  ]),
+  Invoice(date: "23 JUN 2024", items: [
+    Item(name: 'CARMEL CORRETO CHILLETR LARGE', quantity: 1, price: 58.00),
+  ]),
+  Invoice(date: "20 JUN 2024", items: [
+    Item(name: 'CARMEL CORRETO CHILLETR LARGE', quantity: 1, price: 115.00),
+  ]),
+  Invoice(date: "27 MAY 2024", items: [
+    Item(name: 'CARMEL CORRETO CHILLETR LARGE', quantity: 3, price: 115.00),
+    Item(name: "SPANISH LATTE HOT REGULAR", quantity: 1, price: 100.00),
+  ]),
+  Invoice(date: "20 JUN 2024", items: [
+    Item(name: 'MoCHAAINO SMALL', quantity: 1, price: 0.0),
+  ]),
+  Invoice(date: "20 JUN 2024", items: [
+    Item(name: 'CARMEL CORRETO CHILLETR LARGE', quantity: 2, price: 115.00),
+  ]),
 ];

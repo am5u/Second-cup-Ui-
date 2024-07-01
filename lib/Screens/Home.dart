@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_world/Models/Gifts.dart';
 import 'package:hello_world/Screens/Gifts_screen.dart';
 import 'package:hello_world/data.dart';
-import 'package:hello_world/wedgits/buttonsmenu.dart';
+import 'package:hello_world/wedgits/ButtonNNavgator.dart';
 import 'package:hello_world/wedgits/Navbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.black,
         body: SafeArea(
-          child: Column(
+          child: ListView(
             children: [
               Container(
                   child: Row(
@@ -62,6 +62,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Icon(
                     Icons.qr_code_2,
+                    color: Colors.white,
                     size: 40,
                   )
                 ],
@@ -141,10 +142,10 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
-              Buttonsmenu()
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavBar(),
       ),
     );
   }

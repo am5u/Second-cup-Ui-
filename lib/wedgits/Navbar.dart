@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_world/Screens/menu_screen.dart';
 import 'package:hello_world/Screens/orderonline.dart';
+import 'package:hello_world/Screens/socialmedia_screen.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
@@ -17,7 +18,7 @@ class Navbar extends StatelessWidget {
             leading: Icon(
               CupertinoIcons.info_circle_fill,
               color: Colors.white,
-              size: 30,
+              size: 40,
             ),
             title: Text(
               "ABOUT US",
@@ -77,7 +78,10 @@ class Navbar extends StatelessWidget {
               "SOCIAL MEDIA",
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
-            onTap: () => null,
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                  fullscreenDialog: true, builder: (_) => SocialmediaScreen()),
+            ),
           ),
         ],
       ),

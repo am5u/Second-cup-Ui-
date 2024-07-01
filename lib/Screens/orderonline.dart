@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/wedgits/ButtonNNavgator.dart';
 import 'package:hello_world/wedgits/Navbar.dart';
-import 'package:hello_world/wedgits/buttonsmenu.dart';
+import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart'; // Add this import
 
 class orderonline extends StatelessWidget {
   const orderonline({super.key});
@@ -26,26 +28,26 @@ class orderonline extends StatelessWidget {
         drawer: Navbar(),
         body: Padding(
           padding: const EdgeInsets.only(top: 20.0),
-          child: Stack(
+          child: ListView(
             children: [
-              ListView(
-                children: [
-                  GestureDetector(
-                      onTap: () {},
-                      child: Image(
-                        image: AssetImage("images/talbat.png"),
-                      )),
-                ],
+              Link(
+                target: LinkTarget.self,
+                uri: Uri.parse('https://www.talabat.com/ar/egypt/second-cup'),
+                builder: (context, followlink) => ElevatedButton(
+                  onPressed: (followlink),
+                  child: Image(
+                      image: AssetImage(
+                    "images/talbat.png",
+                  )),
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                ),
+                // )],
               ),
-              Positioned(
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: Buttonsmenu(),
-              )
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavBar(), // Corrected the typo
       ),
     );
   }
