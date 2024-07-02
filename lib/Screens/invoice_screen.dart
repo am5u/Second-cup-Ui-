@@ -12,6 +12,7 @@ class InvoiceScreen extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         drawer: Navbar(),
+
         appBar: AppBar(
           title: Image.asset(
             "images/Artboard+2@2x.png",

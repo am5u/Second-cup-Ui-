@@ -58,19 +58,26 @@ class _InvoiceCardState extends State<InvoiceCard> {
               itemBuilder: (context, index) {
                 Item item = widget.invoice.items[index];
                 return ListTile(
-                  subtitle: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(item.name, style: TextStyle(color: Colors.white)),
-                      Text(
-                        'x${item.quantity}',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        '\$${item.subtotal}',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
+                  subtitle: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Expanded(
+                            child: Text(item.name,
+                                style: TextStyle(color: Colors.white))),
+                        Text(
+                          'x${item.quantity}',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 15),
+                          child: Text(
+                            '\$${item.subtotal}',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },

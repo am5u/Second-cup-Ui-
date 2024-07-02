@@ -32,40 +32,41 @@ class HomeScreen extends StatelessWidget {
           child: ListView(
             children: [
               Container(
-                  child: Row(
-                children: [
-                  Container(
-                    margin:
-                        EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
-                    child: CircleAvatar(
-                      radius: 40,
-                      backgroundImage: AssetImage("images/images.png"),
+                  child: Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage("images/images.png"),
+                      ),
                     ),
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                          child: Text(
-                        'AMMAR ELDESOUKI',
-                        style: TextStyle(color: Colors.white, fontSize: 17),
-                      )),
-                      Container(
-                        child: Text(
-                          "01067204840",
+                    Column(
+                      children: [
+                        Container(
+                            child: Text(
+                          'AMMAR ELDESOUKI',
                           style: TextStyle(color: Colors.white, fontSize: 17),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    width: 50,
-                  ),
-                  Icon(
-                    Icons.qr_code_2,
-                    color: Colors.white,
-                    size: 40,
-                  )
-                ],
+                        )),
+                        Container(
+                          child: Text(
+                            "01067204840",
+                            style: TextStyle(color: Colors.white, fontSize: 17),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      width: 50,
+                    ),
+                    Icon(
+                      Icons.qr_code_2,
+                      color: Colors.white,
+                      size: 40,
+                    )
+                  ],
+                ),
               )),
               Container(
                 child: Row(
