@@ -1,16 +1,45 @@
-# hello_world
+# Second Cup UI
 
-A new Flutter project.
 
-## Getting Started
+Home
 
-This project is a starting point for a Flutter application.
+    Displays the number of points the user collected from purchases.
 
-A few resources to get you started if this is your first Flutter project:
+    Could also show quick offers or notifications.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Menu
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    Displays the list of drinks/products offered by Second Cup.
+
+    Shows the price and image of each item.
+
+    The user’s collected points are also displayed here.
+
+My Gift
+
+    Shows available offers and gifts that the user can redeem with points.
+
+Voucher
+
+    Displays available coupons or discounts.
+
+My Activity
+
+    Shows the user’s history of purchases or point collection (activity log).
+
+Refer a Friend
+
+    Allows the user to invite friends (maybe through a link or referral code)
+
+## 🚀 Features
+
+- Modern and responsive UI design
+- Material Design implementation
+- Custom fonts using Google Fonts
+- URL launcher integration for external links
+- Image assets management
+- Cross-platform compatibility (iOS & Android)
+
+
+
+

@@ -3,20 +3,22 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hello_world/Screens/Home.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+          appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
           primaryColor: Colors.white,
-          iconTheme: IconThemeData(color: Colors.white),
+          iconTheme: const IconThemeData(color: Colors.white),
           scaffoldBackgroundColor: Colors.black),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

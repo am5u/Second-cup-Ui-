@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Navbar(),
+        drawer: const Navbar(),
         appBar: AppBar(
           title: Image.asset(
             "images/Artboard+2@2x.png",
@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           ),
           centerTitle: true,
           backgroundColor: Colors.white,
-          actions: [
+          actions: const [
             Icon(
               Icons.person,
               size: 50,
@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         radius: 40,
                         backgroundImage: AssetImage("images/images.png"),
                       ),
@@ -45,22 +45,22 @@ class HomeScreen extends StatelessWidget {
                     Column(
                       children: [
                         Container(
-                            child: Text(
+                            child: const Text(
                           'AMMAR ELDESOUKI',
                           style: TextStyle(color: Colors.white, fontSize: 17),
                         )),
                         Container(
-                          child: Text(
+                          child: const Text(
                             "01067204840",
                             style: TextStyle(color: Colors.white, fontSize: 17),
                           ),
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 50,
                     ),
-                    Icon(
+                    const Icon(
                       Icons.qr_code_2,
                       color: Colors.white,
                       size: 40,
@@ -76,17 +76,17 @@ class HomeScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            child: Text(
+                            child: const Text(
                               "1570",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
                             ),
                           ),
                           Container(
-                              child: Text("POINTS",
+                              child: const Text("POINTS",
                                   style: TextStyle(color: Colors.white))),
                           Container(
-                            child: Icon(
+                            child: const Icon(
                               Icons.shopping_bag,
                               size: 30,
                             ),
@@ -95,10 +95,10 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20),
+                      margin: const EdgeInsets.symmetric(horizontal: 20),
                       // Add some margin
 
-                      child: Text(
+                      child: const Text(
                         "|",
                         style: TextStyle(color: Colors.white, fontSize: 50),
                       ),
@@ -110,20 +110,20 @@ class HomeScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            child: Text(
+                            child: const Text(
                               "1",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
                             ),
                           ),
                           Container(
-                            child: Text(
+                            child: const Text(
                               "GIFT LIST",
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
                           Container(
-                            child: Icon(
+                            child: const Icon(
                               Icons.card_giftcard,
                               color: Colors.red,
                               size: 30,
@@ -135,10 +135,10 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Expanded(
+              const Expanded(
                   child: Image(image: AssetImage("images/newcollection.jpg"))),
               Container(
-                child: Text(
+                child: const Text(
                   "CURRENT BALANCE:1507 POINTS",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
@@ -146,7 +146,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavBar(),
+        bottomNavigationBar: const BottomNavBar(),
       ),
     );
   }

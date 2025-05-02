@@ -5,13 +5,15 @@ import 'package:hello_world/wedgits/InvoiceCard.dart';
 import 'package:hello_world/wedgits/Navbar.dart';
 
 class InvoiceScreen extends StatelessWidget {
+  const InvoiceScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black,
-        drawer: Navbar(),
+        drawer: const Navbar(),
 
         appBar: AppBar(
           title: Image.asset(
@@ -20,7 +22,7 @@ class InvoiceScreen extends StatelessWidget {
           ),
           centerTitle: true,
           backgroundColor: Colors.white,
-          actions: [
+          actions: const [
             Icon(
               Icons.person,
               size: 50,
@@ -33,7 +35,7 @@ class InvoiceScreen extends StatelessWidget {
             children: [...invoices.map((e) => InvoiceCard(invoice: e))],
           ),
         ),
-        bottomNavigationBar: BottomNavBar(),
+        bottomNavigationBar: const BottomNavBar(),
       ),
     );
   }

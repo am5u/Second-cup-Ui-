@@ -6,34 +6,36 @@ import 'package:hello_world/Screens/tryscafuld.dart';
 import 'package:hello_world/wedgits/InvoiceCard.dart';
 
 class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({super.key});
+
   @override
   _BottomNavBarState createState() => _BottomNavBarState();
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  int _currentIndex = 0;
+  final int _currentIndex = 0;
 
   final List<Widget> _children = [
-    HomeScreen(),
-    Mygifts(),
-    InvoiceScreen(),
-    FirstApp(),
+    const HomeScreen(),
+    const Mygifts(),
+    const InvoiceScreen(),
+    const FirstApp(),
   ];
 
   final List<BottomNavigationBarItem> _items = [
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
       icon: Icon(Icons.store),
       label: 'Home',
     ),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
       icon: Icon(Icons.card_giftcard),
       label: 'MyGifts',
     ),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
       icon: Icon(Icons.receipt_long_rounded),
       label: 'My Activity',
     ),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
       icon: Icon(Icons.people_alt_outlined),
       label: 'Refer a Friend',
     ),

@@ -7,7 +7,7 @@ import 'package:hello_world/data.dart';
 class Giftcard extends StatelessWidget {
   final Gift gift;
 
-  const Giftcard({Key? key, required this.gift}) : super(key: key);
+  const Giftcard({super.key, required this.gift});
 
   @override
   Widget build(BuildContext context) {
@@ -16,18 +16,19 @@ class Giftcard extends StatelessWidget {
       child: Card(
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+        color: Colors.black,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 8.0),
+              const SizedBox(height: 8.0),
               Row(
                 children: [
                   Expanded(
                       child:
                           Image(image: AssetImage('images/${gift.imageUrl}'))),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Expanded(
@@ -36,20 +37,20 @@ class Giftcard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '${gift.title}',
-                          style: TextStyle(color: Colors.white),
+                          gift.title,
+                          style: const TextStyle(color: Colors.white),
                         ),
                         Text(
-                          '${gift.about}',
-                          style: TextStyle(color: Colors.white),
+                          gift.about,
+                          style: const TextStyle(color: Colors.white),
                         ),
                         Text(
-                          '${gift.validFrom}',
-                          style: TextStyle(color: Colors.white),
+                          gift.validFrom,
+                          style: const TextStyle(color: Colors.white),
                         ),
                         Text(
-                          '${gift.status}',
-                          style: TextStyle(color: Colors.white),
+                          gift.status,
+                          style: const TextStyle(color: Colors.white),
                         )
                       ],
                     ),
@@ -59,7 +60,6 @@ class Giftcard extends StatelessWidget {
             ],
           ),
         ),
-        color: Colors.black,
       ),
     );
   }

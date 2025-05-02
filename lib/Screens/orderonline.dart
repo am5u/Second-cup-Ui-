@@ -18,14 +18,14 @@ class orderonline extends StatelessWidget {
           ),
           centerTitle: true,
           backgroundColor: Colors.white,
-          actions: [
+          actions: const [
             Icon(
               Icons.person,
               size: 50,
             )
           ],
         ),
-        drawer: Navbar(),
+        drawer: const Navbar(),
         body: Padding(
           padding: const EdgeInsets.only(top: 20.0),
           child: ListView(
@@ -35,19 +35,19 @@ class orderonline extends StatelessWidget {
                 uri: Uri.parse('https://www.talabat.com/ar/egypt/second-cup'),
                 builder: (context, followlink) => ElevatedButton(
                   onPressed: (followlink),
-                  child: Image(
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                  child: const Image(
                       image: AssetImage(
                     "images/talbat.png",
                   )),
-                  style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.black),
                 ),
                 // )],
               ),
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavBar(), // Corrected the typo
+        bottomNavigationBar: const BottomNavBar(), // Corrected the typo
       ),
     );
   }

@@ -9,7 +9,7 @@ class MenuScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Navbar(),
+        drawer: const Navbar(),
         appBar: AppBar(
           title: Image.asset(
             "images/Artboard+2@2x.png",
@@ -17,7 +17,7 @@ class MenuScreen extends StatelessWidget {
           ),
           centerTitle: true,
           backgroundColor: Colors.white,
-          actions: [
+          actions: const [
             Icon(
               Icons.person,
               size: 50,
@@ -27,7 +27,7 @@ class MenuScreen extends StatelessWidget {
         body: Stack(
           children: [
             ListView(
-              children: [
+              children: const [
                 Expanded(
                     child: Image(
                   image: AssetImage("images/second-cup_menu_1.jpg"),
@@ -44,7 +44,7 @@ class MenuScreen extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: BottomNavBar(),
+        bottomNavigationBar: const BottomNavBar(),
       ),
     );
   }

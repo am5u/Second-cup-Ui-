@@ -6,6 +6,8 @@ import 'package:hello_world/wedgits/ButtonNNavgator.dart';
 import 'package:hello_world/wedgits/Giftcard.dart';
 
 class Mygifts extends StatelessWidget {
+  const Mygifts({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,12 +18,12 @@ class Mygifts extends StatelessWidget {
           backgroundColor: Colors.black,
           appBar: AppBar(
             backgroundColor: Colors.black,
-            title: Text(
+            title: const Text(
               "MY GIFTS",
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
             centerTitle: true,
-            bottom: TabBar(
+            bottom: const TabBar(
               tabs: [
                 Tab(
                   child: Text(
@@ -60,7 +62,7 @@ class Mygifts extends StatelessWidget {
               )
             ],
           ),
-          bottomNavigationBar: BottomNavBar(),
+          bottomNavigationBar: const BottomNavBar(),
         ),
       ),
     );

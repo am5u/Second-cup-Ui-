@@ -3,6 +3,8 @@ import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialmediaScreen extends StatefulWidget {
+  const SocialmediaScreen({super.key});
+
   @override
   _Sociaclmedia createState() => _Sociaclmedia();
 }
@@ -15,7 +17,7 @@ class _Sociaclmedia extends State<StatefulWidget> {
         child: Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Social Media",
           style: TextStyle(color: Colors.black),
         ),
@@ -29,11 +31,11 @@ class _Sociaclmedia extends State<StatefulWidget> {
               uri: Uri.parse('https://www.instagram.com/secondcupegypt/?hl=ar'),
               builder: (context, followlink) => ElevatedButton(
                 onPressed: (followlink),
-                child: Image(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                child: const Image(
                     image: AssetImage(
                   "images/instgram.gif",
                 )),
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
               ),
               // )],
               

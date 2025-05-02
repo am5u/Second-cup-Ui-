@@ -15,72 +15,72 @@ class Navbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               CupertinoIcons.info_circle_fill,
               color: Colors.white,
               size: 40,
             ),
-            title: Text(
+            title: const Text(
               "ABOUT US",
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
-            onTap: () => null,
+            onTap: () {},
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.menu_book,
               color: Colors.white,
               size: 30,
             ),
-            title: Text(
+            title: const Text(
               "OUR MENU",
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
-                  fullscreenDialog: true, builder: (_) => MenuScreen()),
+                  fullscreenDialog: true, builder: (_) => const MenuScreen()),
             ),
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.delivery_dining_sharp,
               color: Colors.white,
               size: 30,
             ),
-            title: Text(
+            title: const Text(
               "ORDER ONLINE",
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
-                  fullscreenDialog: true, builder: (_) => orderonline()),
+                  fullscreenDialog: true, builder: (_) => const orderonline()),
             ),
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               CupertinoIcons.location_solid,
               color: Colors.white,
               size: 30,
             ),
-            title: Text(
+            title: const Text(
               "LOCATIONS",
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
-            onTap: () => null,
+            onTap: () {},
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.insert_comment_rounded,
               color: Colors.white,
               size: 25,
             ),
-            title: Text(
+            title: const Text(
               "SOCIAL MEDIA",
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
-                  fullscreenDialog: true, builder: (_) => SocialmediaScreen()),
+                  fullscreenDialog: true, builder: (_) => const SocialmediaScreen()),
             ),
           ),
         ],

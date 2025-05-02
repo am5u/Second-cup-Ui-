@@ -7,6 +7,7 @@ class FirstApp extends StatefulWidget {
   @override
   const FirstApp({super.key});
 
+  @override
   State<FirstApp> createState() => _firstapp();
 }
 
@@ -20,15 +21,15 @@ class _firstapp extends State<FirstApp> {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: Colors.black,
-          drawer: Navbar(),
+          drawer: const Navbar(),
           appBar: AppBar(
-            title: Center(
+            title: const Center(
               child: Text(
                 "REFER  A FRIEND ",
                 style: TextStyle(color: Colors.black),
               ),
             ),
-            actions: [
+            actions: const [
               Icon(
                 Icons.person,
                 size: 40,
@@ -39,7 +40,7 @@ class _firstapp extends State<FirstApp> {
             padding: const EdgeInsets.only(top: 40),
             child: ListView(
               children: [
-                Center(
+                const Center(
                   child: Text(
                     "GET A BENEFIT",
                     style: TextStyle(
@@ -48,14 +49,14 @@ class _firstapp extends State<FirstApp> {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                Center(
+                const Center(
                   child: Text(
                     "FOR EVERY FRIEND THAT JOINS",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 30, bottom: 30),
+                const Padding(
+                  padding: EdgeInsets.only(top: 30, bottom: 30),
                   child: Center(
                     child: Image(
                       image: AssetImage("images/profile.jpg"),
@@ -68,7 +69,7 @@ class _firstapp extends State<FirstApp> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                     ),
-                    child: Text(
+                    child: const Text(
                       "INVITE NOW ",
                       style: TextStyle(color: Colors.black, fontSize: 20),
                     ),
@@ -80,33 +81,33 @@ class _firstapp extends State<FirstApp> {
                   child: Center(
                       child: Column(
                     children: [
-                      Text(
+                      const Text(
                         "OR",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         "TAP TO COPY INVITE CODE",
                         style: TextStyle(color: Colors.white),
                       ),
                       ElevatedButton(
                           onPressed: () {},
-                          child: Text(
-                            "3SXEC",
-                            style: TextStyle(color: Colors.white),
-                          ),
                           style: ElevatedButton.styleFrom(
-                            minimumSize: Size(200, 50),
+                            minimumSize: const Size(200, 50),
                             backgroundColor: Colors.black,
                             elevation: 0,
                             // Remove the elevation (shadow)
-                            shape: BeveledRectangleBorder(
+                            shape: const BeveledRectangleBorder(
                                 borderRadius: BorderRadius.zero),
-                            side: BorderSide(
+                            side: const BorderSide(
                                 width: 1,
                                 color: Colors.white), // Add a white border
+                          ),
+                          child: const Text(
+                            "3SXEC",
+                            style: TextStyle(color: Colors.white),
                           )),
                     ],
                   )),
@@ -114,7 +115,7 @@ class _firstapp extends State<FirstApp> {
               ],
             ),
           ),
-          bottomNavigationBar: BottomNavBar(),
+          bottomNavigationBar: const BottomNavBar(),
         ));
   }
 }

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_world/Models/Invoice.dart';
 import 'package:hello_world/Models/item.dart';
@@ -6,7 +5,7 @@ import 'package:hello_world/Models/item.dart';
 class InvoiceCard extends StatefulWidget {
   final Invoice invoice;
 
-  const InvoiceCard({required this.invoice});
+  const InvoiceCard({super.key, required this.invoice});
 
   @override
   State<InvoiceCard> createState() => _InvoiceCardState();
@@ -22,18 +21,18 @@ class _InvoiceCardState extends State<InvoiceCard> {
       child: Column(
         children: [
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.phone_android,
               color: Colors.white,
               size: 30,
             ),
             title: Text(
               ' ${widget.invoice.date}',
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
             subtitle: Text(
                 'Total: \$${widget.invoice.items.fold(0.0, (sum, item) => sum + item.subtotal)}',
-                style: TextStyle(color: Colors.white)),
+                style: const TextStyle(color: Colors.white)),
             trailing: GestureDetector(
               onTap: () {
                 setState(() {
@@ -47,13 +46,13 @@ class _InvoiceCardState extends State<InvoiceCard> {
             ),
           ),
           AnimatedContainer(
-            duration: Duration(milliseconds: 300),
+            duration: const Duration(milliseconds: 300),
             height: _isExpanded ? null : 0,
             child: ListView.builder(
               shrinkWrap: true,
               physics: _isExpanded
-                  ? ScrollPhysics()
-                  : NeverScrollableScrollPhysics(),
+                  ? const ScrollPhysics()
+                  : const NeverScrollableScrollPhysics(),
               itemCount: widget.invoice.items.length,
               itemBuilder: (context, index) {
                 Item item = widget.invoice.items[index];
@@ -64,16 +63,16 @@ class _InvoiceCardState extends State<InvoiceCard> {
                       children: [
                         Expanded(
                             child: Text(item.name,
-                                style: TextStyle(color: Colors.white))),
+                                style: const TextStyle(color: Colors.white))),
                         Text(
                           'x${item.quantity}',
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 15),
+                          padding: const EdgeInsets.only(left: 15),
                           child: Text(
                             '\$${item.subtotal}',
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
                         ),
                       ],
